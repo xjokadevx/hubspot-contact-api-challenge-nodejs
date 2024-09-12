@@ -25,7 +25,7 @@ Los pasos para poder ambientar este proyecto son los siguientes:
 
 - Clonar el repositorio en tu local utilizando el siguiente comando
 
-  - `git clone ---`
+  - `git clone https://github.com/xjokadevx/hubspot-contact-api-challenge-nodejs.git`
 
 - Abrir proyecto en visual studio code o tu editor de codigo favorito.
 - Crear archivo .`env` en la raiz del proyecto y especificar cada valor como
