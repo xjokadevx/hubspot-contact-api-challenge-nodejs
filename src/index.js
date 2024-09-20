@@ -7,5 +7,3 @@ const { PORT } = process.env;
 app.listen(PORT || 3300, () => {
   console.log('ONLINE ', PORT);
 });
-
-export default app;

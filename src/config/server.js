@@ -4,12 +4,12 @@ import helmet from 'helmet';
 import dotenv from 'dotenv';
 import morgan from 'morgan';
 import swaggerUi from 'swagger-ui-express';
-import requestId from 'express-request-id';
 
 import swaggerDocs from '../utils/swagger.js';
 import routerIndex from '../routes/index.js';
 import { errorHandler } from '../middlewares/errorHandler.js';
 import { requestLogMw } from '../middlewares/requestLogMw.js';
+import requestId from '../middlewares/requestIdMw.js';
 
 dotenv.config();
 const { NODE_ENV } = process.env;
