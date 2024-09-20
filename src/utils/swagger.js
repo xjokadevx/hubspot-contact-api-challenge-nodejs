@@ -2,8 +2,8 @@ import swaggerJsdoc from 'swagger-jsdoc';
 import { dirname, join } from 'path';
 import { fileURLToPath } from 'url';
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = dirname(__filename);
+const _filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(_filename);
 
 const { SWAGGER_URL } = process.env;
 

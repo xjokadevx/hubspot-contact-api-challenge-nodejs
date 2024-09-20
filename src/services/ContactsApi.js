@@ -29,6 +29,8 @@ export class ContactAPIService extends HubSpotAPI {
           error.body.message,
           '[CONTACTAPI] - update'
         );
+      } else {
+        throw new Error('[HubSpotService][ContactAPI] ' + error);
       }
     }
   }

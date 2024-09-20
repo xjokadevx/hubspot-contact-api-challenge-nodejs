@@ -2,8 +2,6 @@ export const NULL_VALUES = [
   null,
   undefined,
   0,
-  {},
-  [],
   '',
   'null',
   'undefined',
