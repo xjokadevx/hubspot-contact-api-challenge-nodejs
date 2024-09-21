@@ -37,7 +37,7 @@ export async function updateContactController(
     logger.info(
       `${req.id}#[updateContactController]: Returning data to client with ${_result.totalElements} contacts`
     );
-    res.send(_apiResponse);
+    return res.send(_apiResponse);
   } catch (error) {
     if (error instanceof ApiError) {
       logger.error(`${req.id}#` + error.stack);
@@ -45,7 +45,7 @@ export async function updateContactController(
         `${req.id}#${error.section}: ${error.code} ${error.category}`
       );
     }
-    logger.error(`${req.id}#[updateContactController] `, error);
+    logger.error(`${req?.id}#[updateContactController] `, error);
     next(error);
   }
 }
@@ -76,7 +76,7 @@ export async function createContactController(
     logger.info(
       `${req.id}#[createContactController]: Returning data to client with ${_result.totalElements} contacts`
     );
-    res.send(_apiResponse);
+    return res.send(_apiResponse);
   } catch (error) {
     if (error instanceof ApiError) {
       logger.error(`${req.id}#` + error.stack);
@@ -127,7 +127,7 @@ export async function getContactsBySearchController(
     logger.info(
       `${req.id}#[getContactsBySearchController]: Returning data to client with ${_result.totalElements} contacts`
     );
-    res.send(_apiResponse);
+    return res.send(_apiResponse);
   } catch (error) {
     if (error instanceof ApiError) {
       logger.error(`${req.id}#` + error.stack);
@@ -167,7 +167,7 @@ export async function getContactListController(
     logger.info(
       `${req.id}#[getContactListController]: Returning data to client with ${_result.totalElements} contacts`
     );
-    res.send(_apiResponse);
+    return res.send(_apiResponse);
   } catch (error) {
     if (error instanceof ApiError) {
       logger.error(`${req.id}#` + error.stack);
@@ -206,7 +206,7 @@ export async function getContactByIdController(
     logger.info(
       `${req.id}#[getContactByIdController]: Returning data to client with ${_result.totalElements} contacts`
     );
-    res.send(_apiResponse);
+    return res.send(_apiResponse);
   } catch (error) {
     if (error instanceof ApiError) {
       logger.error(`${req.id}#` + error.stack);
@@ -246,7 +246,7 @@ export async function deleteContactByIdController(
     logger.info(
       `${req.id}#[deleteContactByIdController]: Returning data to client. Contact ${tmpBodyRequest.contactId} deleted.`
     );
-    res.send(_apiResponse);
+    return res.send(_apiResponse);
   } catch (error) {
     if (error instanceof ApiError) {
       logger.error(`${req.id}#` + error.stack);

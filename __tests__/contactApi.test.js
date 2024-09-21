@@ -1,7 +1,6 @@
 import { ApiException } from '@hubspot/api-client/lib/codegen/crm/contacts';
 import { ContactAPIService } from '../src/services/ContactsApi.js';
 import { ApiError } from '../src/models/ApiError.js';
-import e from 'express';
 
 jest.mock('@hubspot/api-client', () => ({
   Client: jest.fn(() => {
